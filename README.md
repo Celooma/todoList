@@ -1,16 +1,25 @@
 # Task Management Application Documentation
-
-This documentation provides an overview of the Task Management application and usage instructions.
-
+------------------
 ## 1. Introduction
 ------------------
+This documentation provides an overview of the Task Management application and usage instructions.
+
+------------------
 ## 2. Installation
+------------------
 2.1. Clone the repo and run
 +       docker-compose up --build
++ Please make sure that port 3306 and 8080 are available.
+
 2.2. After docker has started, run migrations and seeds :
 +        docker exec -it my-app php artisan migrate --seed
-2.3. You may now use the app :). Login with email: 'test@gmail.com' and password: 'password'
+2.3. The app will be available at PORT:8080 . 
++ Login with email: 'test@gmail.com' and password: 'password'
 or create your own user.
+
+2.3 To run tests run the following command:
+
+    docker exec -it my-app php artisan test
 
 ------------------
 ## 3. Routes
