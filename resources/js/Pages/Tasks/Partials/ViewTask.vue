@@ -20,7 +20,6 @@ const closeModal = () => {
             <p class="text-md text-gray-600 mb-1"><span class="text-lg text-black">Description</span> : {{ props.task.description }}</p>
             <p class="text-md text-gray-600 mb-1"><span class="text-lg text-black">Status</span> : {{ props.task.is_completed ? 'Completed' : 'Not Completed' }}</p>
             <p v-if="props.task.is_completed" class="text-md text-gray-600 mb-1"><span class="text-lg text-black">Completion date </span>: {{ props.task.completed_at }}</p>
-            <p class="text-md text-gray-600 mb-1"><span class="text-lg text-black">Creation date</span> : {{ props.task.created_at }}</p>
         </div>
 
     </section>

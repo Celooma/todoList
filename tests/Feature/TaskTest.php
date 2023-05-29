@@ -64,8 +64,7 @@ class TaskTest extends TestCase
             'id' => $task->id,
             'title' => $data['title'],
             'description' => $data['description'],
-            'is_completed' => $data['is_completed'],
-            'completed_at' => now(),
+            'is_completed' => !!$data['is_completed'],
         ]);
     }
 
