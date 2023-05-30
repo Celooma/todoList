@@ -30,7 +30,7 @@ COPY . .
 EXPOSE 8080
 
 # Start the PHP development server
-CMD composer install --no-interaction && npm install && npm build && php artisan serve --host=0.0.0.0 --port=8080
+CMD composer install --no-interaction && npm install && npm run build && php artisan serve --host=0.0.0.0 --port=8080
 
 
 
