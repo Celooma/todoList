@@ -13,8 +13,6 @@ RUN apt-get update && apt-get install -y \
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
-
-
 # Set working directory
 WORKDIR /var/www/html
 
@@ -28,15 +26,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Copy application files
 COPY . .
 
-# Install composer dependencies
-RUN composer install --no-interaction
-
-
 # Expose port
 EXPOSE 8080
 
 # Start the PHP development server
-CMD php artisan serve --host=0.0.0.0 --port=8080
+CMD composer install --no-interaction && php artisan serve --host=0.0.0.0 --port=8080
 
 
 
